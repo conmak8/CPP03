@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 09:58:15 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/22 12:22:31 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/22 14:23:20 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,54 @@
 #include "../include/Colors.hpp"
 
 //-----------------OCF----------------------//
-ClapTrap::ClapTrap(const std::string &name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)		// * Constructor
+ClapTrap::ClapTrap() : name("Unknown"), hitPoints(10), energyPoints(10), attackDamage(0)						// * Constructor (default)
 {
 	std::cout << GREEN << "ClapTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &copy) : name(copy.name), hitPoints(10), energyPoints(10), attackDamage(0)	// * Copy constructor
+ClapTrap::ClapTrap(const std::string &name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)		// * Constructor with parameters
+{
+	std::cout << GREEN << "ClapTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
+}
+
+// ! v.1 It is wrong since if i called it later in the program won't pass the proper values
+// ClapTrap::ClapTrap(const ClapTrap &copy) : name(copy.name), hitPoints(10), energyPoints(10), attackDamage(0)	// * Copy constructor
+// {
+// 	std::cout << GREEN << "ClapTrap 🏗️  Copy Constructor called for " << UBR << name << RESET << std::endl;
+// }
+
+// ! v.2
+// ! is this better solution and why? : i won't work in case of const!
+// Copy Constructor
+// ClapTrap::ClapTrap(const ClapTrap& other) {
+//     *this = other;
+//     std::cout << "ClapTrap Copy constructor called for " << name << std::endl;
+// }
+
+// ! v.3 not optimal coz inside copy calls assignment also wont work with const
+// // Copy Constructor
+// ClapTrap::ClapTrap(const ClapTrap& other) {
+//     *this = other;
+//     std::cout << "ClapTrap Copy constructor called for " << name << std::endl;
+// }
+// // Assignment Operator
+// ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
+//     if (this != &other) {
+//         this->name = other.name;
+//         this->hitPoints = other.hitPoints;
+//         this->energyPoints = other.energyPoints;
+//         this->attackDamage = other.attackDamage;
+//     }
+//     std::cout << "ClapTrap Assignment operator called for " << name << std::endl;
+//     return *this;
+// }
+
+// * v.4
+ClapTrap::ClapTrap(const ClapTrap &copy) : name(copy.name), hitPoints(copy.hitPoints), 
+											energyPoints(copy.energyPoints), attackDamage(copy.attackDamage)
 {
 	std::cout << GREEN << "ClapTrap 🏗️  Copy Constructor called for " << UBR << name << RESET << std::endl;
 }
-
-// ? is this better solution and why
-/* // Copy Constructor
-ClapTrap::ClapTrap(const ClapTrap& other) {
-    *this = other;
-    std::cout << "ClapTrap Copy constructor called for " << name << std::endl;
-} */
 
 ClapTrap &ClapTrap::operator= (const ClapTrap &copy) 															// * Copy assignment
 {
