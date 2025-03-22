@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 09:58:15 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/22 10:58:46 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/22 11:18:40 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,33 @@ ClapTrap::~ClapTrap() 																							// * Destructor
 //-----------Methods------------------------//
 void ClapTrap::attack(const std::string &target)
 {
-	std::cout << "🪤 ClapTrap " << name << " attack " << target << " causing " << attackDamage << " points of damage! 💥" << std::endl;
+	if ((hitPoints <= 0) || (energyPoints <= 0))
+	{
+		std::cout << "🪤 ClapTrap unable to attack due to low energy points or hit points!" << std:: endl;
+		return;
+	}
 	energyPoints--;
-} 
+	std::cout << "🪤 ClapTrap " << name << " attack " << target << " causing " << attackDamage << " points of damage! 💥" << std::endl;
+}
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	
+	hitPoints -= amount;
+	if (hitPoints < 0)
+		hitPoints = 0;
+	std::cout << "🪤 ClapTrap " << name << " takes " << amount << " points of damage! 💥" << std::endl;
+	std::cout << "❤️ HP left : " << hitPoints << std::endl;
+}
+
+void ClapTrap::beRepaired(unsigned int amount)
+{
+	if ((hitPoints <= 0) || (energyPoints <= 0))
+	{
+		std::cout << "🪤 ClapTrap unable to 🔧 repair due to low energy points or hit points!" << std:: endl;
+		return;
+	}
+	energyPoints--;
+	hitPoints += amount;
+	std::cout << "🪤 ClapTrap " << name << " 🔧 repair itself, getting better " << amount << " ❤️ hit points." << std::endl;
+	std::cout << "❤️ HP left : " << hitPoints << std::endl;
 }
