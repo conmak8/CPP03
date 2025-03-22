@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 09:58:15 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/22 14:23:20 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/22 14:26:43 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,8 @@ void ClapTrap::attack(const std::string &target)
 	}
 	energyPoints--;
 	std::cout << YELLOW << "🪤  ClapTrap " << UBR << name << RESET << YELLOW << " attack " << target << " causing " << BOLD << attackDamage << RESET << YELLOW << " points of damage!💥" << RESET << std::endl;
+	std::cout << "❤️  HP left : " << hitPoints << std::endl;
+	std::cout << "⚡️ EP left : " << energyPoints << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
@@ -102,6 +104,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 		hitPoints = 0;
 	std::cout << RED << "🪤  ClapTrap " << UBR << name << RESET << RED << " takes " << BOLD << amount << RESET << RED << " points of damage! 💥" << RESET << std::endl;
 	std::cout << "❤️  HP left : " << hitPoints << std::endl;
+	std::cout << "⚡️ EP left : " << energyPoints << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
@@ -115,4 +118,5 @@ void ClapTrap::beRepaired(unsigned int amount)
 	hitPoints += amount;
 	std::cout << GREEN << "🪤  ClapTrap " << UBR << name << RESET << GREEN << " 🔧 repair itself, getting better -> " << BOLD << amount << RESET << GREEN << " <- ❤️  hit points." << RESET << std::endl;
 	std::cout << "❤️  HP left : " << hitPoints << std::endl;
+	std::cout << "⚡️ EP left : " << energyPoints << std::endl;
 }
