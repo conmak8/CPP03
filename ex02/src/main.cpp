@@ -6,12 +6,13 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 11:22:32 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/23 09:53:41 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/23 11:44:12 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ClapTrap.hpp"
 #include "../include/ScavTrap.hpp"
+#include "../include/FragTrap.hpp"
 
 
 int main()
@@ -32,12 +33,20 @@ int main()
 	// cp.beRepaired(5);
 	// cp.takeDamage(24);
 
-// ----01: test
-	ScavTrap serena("Serena");
-	serena.attack("Loci");
-	serena.takeDamage(30);
-	serena.beRepaired(20);
-	serena.guardGate();
+// // ----01: test
+// 	ScavTrap serena("Serena");
+// 	serena.attack("Loci");
+// 	serena.takeDamage(30);
+// 	serena.beRepaired(20);
+// 	serena.guardGate();
 
-	return 0;
+// ----02: test
+	FragTrap fraggy("Fraggy");
+		
+	fraggy.attack("Enemy");
+	fraggy.takeDamage(40);
+	fraggy.beRepaired(25);
+	fraggy.highFiveGuys();
+
+	return (0);
 }
