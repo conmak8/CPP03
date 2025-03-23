@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 11:08:12 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/23 11:42:14 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/23 13:10:19 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "ClapTrap.hpp"
 
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 public:
 		//-----------OCF-----------------//
