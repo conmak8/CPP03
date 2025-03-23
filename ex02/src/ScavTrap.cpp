@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 00:20:58 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/23 09:45:42 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/23 11:46:27 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ ScavTrap::ScavTrap() : ClapTrap("Unknown")																		// * Constructor
 	hitPoints = 100;
 	energyPoints = 50;
 	attackDamage = 20;
-	std::cout << BLUE << "ScavTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
+	std::cout << BLUE << "🤖  ScavTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name) 													// * Constructor with parameters
@@ -27,12 +27,12 @@ ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name) 													// * C
 	hitPoints = 100;
 	energyPoints = 50;
 	attackDamage = 20;
-	std::cout << BLUE << "ScavTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
+	std::cout << BLUE << "🤖  ScavTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy) 														// * Copy constructor
 {
-	std::cout << BLUE << "ScavTrap 🏗️  Copy Constructor called for " << UBR << name << RESET << std::endl;
+	std::cout << BLUE << "🤖  ScavTrap 🏗️  Copy Constructor called for " << UBR << name << RESET << std::endl;
 }
 
 ScavTrap &ScavTrap::operator= (const ScavTrap &copy)															// * Copy assignment operator
@@ -43,13 +43,13 @@ ScavTrap &ScavTrap::operator= (const ScavTrap &copy)															// * Copy ass
 		return (*this);
 	}
 	ClapTrap::operator=(copy);
-	std::cout << BLUE << "ScavTrap 🏗️  Copy Assignment operator called for " << UBR << name << RESET << std::endl;
+	std::cout << BLUE << "🤖  ScavTrap 🏗️  Copy Assignment operator called for " << UBR << name << RESET << std::endl;
 	return (*this);
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << RED << "ScavTrap 🧨 Destructor called for " << UBR << name << RESET << std::endl;
+	std::cout << RED << "🤖  ScavTrap 🧨 Destructor called for " << UBR << name << RESET << std::endl;
 }
 
 void ScavTrap::attack(const std::string &target)
@@ -67,5 +67,5 @@ void ScavTrap::attack(const std::string &target)
 
 void ScavTrap::guardGate()
 {
-	std::cout << BLUE << "🤖  ScavTrap in now in Asgard's Gate Keeper mode! ᛰ" << RESET << std:: endl;
+	std::cout << BLUE << "🤖  ScavTrap " << name << " in now in Asgard's Gate Keeper mode! ᛰ" << RESET << std:: endl;
 }

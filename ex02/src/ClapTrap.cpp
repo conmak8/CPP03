@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 09:58:15 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/23 09:41:04 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/23 11:46:58 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 //-----------------OCF----------------------//
 ClapTrap::ClapTrap() : name("Unknown"), hitPoints(10), energyPoints(10), attackDamage(0)						// * Constructor (default)
 {
-	std::cout << GREEN << "ClapTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
+	std::cout << GREEN << "🪤  ClapTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string &name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)		// * Constructor with parameters
 {
-	std::cout << GREEN << "ClapTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
+	std::cout << GREEN << "🪤  ClapTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
 }
 
 // ! v.1 It is wrong since if i called it later in the program won't pass the proper values
@@ -61,7 +61,7 @@ ClapTrap::ClapTrap(const std::string &name) : name(name), hitPoints(10), energyP
 ClapTrap::ClapTrap(const ClapTrap &copy) : name(copy.name), hitPoints(copy.hitPoints), 							// * Copy Constructor
 											energyPoints(copy.energyPoints), attackDamage(copy.attackDamage)
 {
-	std::cout << GREEN << "ClapTrap 🏗️  Copy Constructor called for " << UBR << name << RESET << std::endl;
+	std::cout << GREEN << "🪤  ClapTrap 🏗️  Copy Constructor called for " << UBR << name << RESET << std::endl;
 }
 
 ClapTrap &ClapTrap::operator= (const ClapTrap &copy) 															// * Copy assignment operator
@@ -75,13 +75,13 @@ ClapTrap &ClapTrap::operator= (const ClapTrap &copy) 															// * Copy as
 	hitPoints = copy.hitPoints;
 	energyPoints = copy.energyPoints;
 	attackDamage = copy.attackDamage;
-	std::cout << GREEN << "ClapTrap 🏗️  Copy Assignment operator called for " << UBR << name << RESET << std::endl;
+	std::cout << GREEN << "🪤  ClapTrap 🏗️  Copy Assignment operator called for " << UBR << name << RESET << std::endl;
 	return (*this);
 }
 
 ClapTrap::~ClapTrap() 																							// * Destructor
 {
-	std::cout << RED << "ClapTrap 🧨 Destructor called for " << UBR << name << RESET << std::endl;
+	std::cout << RED << "🪤  ClapTrap 🧨 Destructor called for " << UBR << name << RESET << std::endl;
 }
 
 //==========================================//
