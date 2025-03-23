@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 09:58:15 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/23 09:20:52 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/23 09:41:04 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void ClapTrap::attack(const std::string &target)
 		return;
 	}
 	energyPoints--;
-	std::cout << YELLOW << "🪤  ClapTrap " << UBR << name << RESET << YELLOW << " attack " << target << " causing " << BOLD << attackDamage << RESET << YELLOW << " points of damage!💥" << RESET << std::endl;
+	std::cout << YELLOW << "🪤  ClapTrap " << UBR << name << RESET << YELLOW << " attacks " << target << " causing " << BOLD << attackDamage << RESET << YELLOW << " points of damage!💥" << RESET << std::endl;
 	std::cout << "❤️  HP left : " << hitPoints << std::endl;
 	std::cout << "⚡️ EP left : " << energyPoints << std::endl;
 }
