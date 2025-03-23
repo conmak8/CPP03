@@ -1,5 +1,5 @@
 # Project Name
-NAME		=	$(BIN_DIR)/repetitive
+NAME		=	$(BIN_DIR)/diamond
 
 # Command-line arguments for run and valgrind
 ARGS		=
