@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 00:20:58 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/23 09:45:42 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/23 11:37:57 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,5 @@ void ScavTrap::attack(const std::string &target)
 
 void ScavTrap::guardGate()
 {
-	std::cout << BLUE << "🤖  ScavTrap in now in Asgard's Gate Keeper mode! ᛰ" << RESET << std:: endl;
+	std::cout << BLUE << "🤖  ScavTrap " << name << " in now in Asgard's Gate Keeper mode! ᛰ" << RESET << std:: endl;
 }

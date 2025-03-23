@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 11:22:32 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/23 09:53:41 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/23 11:39:45 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ int main()
 	serena.beRepaired(20);
 	serena.guardGate();
 
-	return 0;
+	return (0);
 }
