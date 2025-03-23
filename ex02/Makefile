@@ -1,5 +1,5 @@
 # Project Name
-NAME		=	$(BIN_DIR)/bsp
+NAME		=	$(BIN_DIR)/repetitive
 
 # Command-line arguments for run and valgrind
 ARGS		=
