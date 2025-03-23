@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 11:19:18 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/23 11:45:54 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/23 12:01:40 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../include/Colors.hpp"
 
 
-FragTrap::FragTrap() : ClapTrap("Unknown")																		// * Constructor
+FragTrap::FragTrap() : ClapTrap("Unknown")																				// * Constructor
 {
 	hitPoints = 100;
 	energyPoints = 100;
@@ -22,7 +22,7 @@ FragTrap::FragTrap() : ClapTrap("Unknown")																		// * Constructor
 	std::cout << CYAN << "🦿 FragTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
 }
 
-FragTrap::FragTrap(const std::string &name) : ClapTrap(name) 													// * Constructor with parameters
+FragTrap::FragTrap(const std::string &name) : ClapTrap(name) 															// * Constructor with parameters
 {
 	hitPoints = 100;
 	energyPoints = 100;
@@ -30,12 +30,12 @@ FragTrap::FragTrap(const std::string &name) : ClapTrap(name) 													// * C
 	std::cout << CYAN << "🦿 FragTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy) 														// * Copy constructor
+FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy) 																// * Copy constructor
 {
 	std::cout << CYAN << "🦿 FragTrap 🏗️  Copy Constructor called for " << UBR << name << RESET << std::endl;
 }
 
-FragTrap &FragTrap::operator= (const FragTrap &copy)															// * Copy assignment operator
+FragTrap &FragTrap::operator= (const FragTrap &copy)																	// * Copy assignment operator
 {
 	if (this == &copy)
 	{
@@ -47,7 +47,7 @@ FragTrap &FragTrap::operator= (const FragTrap &copy)															// * Copy ass
 	return (*this);
 }
 
-FragTrap::~FragTrap()																							// * Destructor
+FragTrap::~FragTrap()																									// * Destructor
 {
 	std::cout << RED << "🦿 FragTrap 🧨 Destructor called for " << UBR << name << RESET << std::endl;
 }

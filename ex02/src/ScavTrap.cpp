@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 00:20:58 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/23 11:46:27 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/23 12:02:18 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ ScavTrap &ScavTrap::operator= (const ScavTrap &copy)															// * Copy ass
 	return (*this);
 }
 
-ScavTrap::~ScavTrap()
+ScavTrap::~ScavTrap()																							// * Destructor
 {
 	std::cout << RED << "🤖  ScavTrap 🧨 Destructor called for " << UBR << name << RESET << std::endl;
 }
