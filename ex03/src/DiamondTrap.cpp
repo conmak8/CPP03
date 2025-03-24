@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 13:02:48 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/24 10:38:03 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/24 10:44:16 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ DiamondTrap::DiamondTrap(const std::string &name) : ClapTrap(name + "_clap_name"
 
 DiamondTrap::DiamondTrap(const DiamondTrap &copy) : ClapTrap(copy), ScavTrap(copy), FragTrap(copy)								// * Copy constructor
 {
+	this->name = copy.name;
 	std::cout << CYAN << "💎 DiamondTrap 🏗️  Copy Constructor called for " << UBR << name << RESET << std::endl;
 }
 
@@ -41,7 +42,7 @@ DiamondTrap &DiamondTrap::operator= (const DiamondTrap &copy)																	//
 {
 	if (this == &copy)
 	{
-		std::cout << "Self assignment detected, skipping copy";
+		std::cout << "Self assignment detected, skipping copy" << std::endl;
 		return (*this);
 	}
 	ClapTrap::operator=(copy);
