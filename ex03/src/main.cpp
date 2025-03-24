@@ -6,13 +6,14 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 11:22:32 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/23 11:44:12 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/24 10:35:28 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ClapTrap.hpp"
 #include "../include/ScavTrap.hpp"
 #include "../include/FragTrap.hpp"
+#include "../include/DiamondTrap.hpp"
 
 
 int main()
@@ -40,13 +41,32 @@ int main()
 // 	serena.beRepaired(20);
 // 	serena.guardGate();
 
-// ----02: test
-	FragTrap fraggy("Fraggy");
+// // ----02: test
+// 	FragTrap fraggy("Fraggy");
 		
-	fraggy.attack("Enemy");
-	fraggy.takeDamage(40);
-	fraggy.beRepaired(25);
-	fraggy.highFiveGuys();
+// 	fraggy.attack("Enemy");
+// 	fraggy.takeDamage(40);
+// 	fraggy.beRepaired(25);
+// 	fraggy.highFiveGuys();
+// ----03: Diamond
+	// DiamondTrap diamond("SweetDiamond");
+    // diamond.attack("Enemy");
+    // diamond.takeDamage(30);
+    // diamond.beRepaired(20);
+    // diamond.whoAmI();
+
+	// DiamondTrap diamond;
+	// diamond.attack("AAAAAAA");
+	// diamond.whoAmI();
+
+	DiamondTrap diamond1("Sweet");
+	DiamondTrap diamond2("Sparkle");
+	
+	diamond2 = diamond1;
+	diamond2.whoAmI();
+	diamond2.attack("Enemy");
+	
+
 
 	return (0);
 }

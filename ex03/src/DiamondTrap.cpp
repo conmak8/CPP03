@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 13:02:48 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/24 10:14:43 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/24 10:38:03 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,7 @@ DiamondTrap &DiamondTrap::operator= (const DiamondTrap &copy)																	//
 		return (*this);
 	}
 	ClapTrap::operator=(copy);
-	name = copy.name;				// ! check again what happens here!
-	// ClapTrap::name = copy.ClapTrap::name;
-	// hitPoints = copy.hitPoints;
-	// energyPoints = copy.energyPoints;
-	// attackDamage = copy.attackDamage;
+	name = copy.name;					// ! check again what happens here!
 	
 	std::cout << CYAN << "💎 DiamondTrap 🏗️  Copy Assignment operator called for " << UBR << name << RESET << std::endl;
 	return (*this);
@@ -69,3 +65,4 @@ void DiamondTrap::whoAmI()
 {
 	std::cout << CYAN << "💎 DiamondTrap name is : " << name << " | 🪤  ClapTrap name is : " << ClapTrap::name << RESET << std:: endl;
 }
+
