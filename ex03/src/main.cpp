@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 11:22:32 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/24 18:44:07 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/24 18:59:32 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ int main()
 
 	// DiamondTrap diamond1("Sweet");
 	// DiamondTrap diamond2("Sparkle");
-	
 	// diamond2 = diamond1;
 	// diamond2.whoAmI();
 	// diamond2.attack("Enemy");
