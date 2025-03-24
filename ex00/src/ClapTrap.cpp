@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 09:58:15 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/22 14:26:43 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/24 18:20:46 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 //-----------------OCF----------------------//
 ClapTrap::ClapTrap() : name("Unknown"), hitPoints(10), energyPoints(10), attackDamage(0)						// * Constructor (default)
 {
-	std::cout << GREEN << "ClapTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
+	std::cout << GREEN << "👏 ClapTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string &name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)		// * Constructor with parameters
 {
-	std::cout << GREEN << "ClapTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
+	std::cout << GREEN << "👏 ClapTrap 🏗️  Constructor called for " << UBR << name << RESET << std::endl;
 }
 
 // ! v.1 It is wrong since if i called it later in the program won't pass the proper values
@@ -60,10 +60,10 @@ ClapTrap::ClapTrap(const std::string &name) : name(name), hitPoints(10), energyP
 ClapTrap::ClapTrap(const ClapTrap &copy) : name(copy.name), hitPoints(copy.hitPoints), 
 											energyPoints(copy.energyPoints), attackDamage(copy.attackDamage)
 {
-	std::cout << GREEN << "ClapTrap 🏗️  Copy Constructor called for " << UBR << name << RESET << std::endl;
+	std::cout << GREEN << "👏 ClapTrap 🏗️  Copy Constructor called for " << UBR << name << RESET << std::endl;
 }
 
-ClapTrap &ClapTrap::operator= (const ClapTrap &copy) 															// * Copy assignment
+ClapTrap &ClapTrap::operator= (const ClapTrap &copy) 															// * Copy assignment operator
 {
 	if (this == &copy)
 	{
@@ -79,7 +79,7 @@ ClapTrap &ClapTrap::operator= (const ClapTrap &copy) 															// * Copy as
 
 ClapTrap::~ClapTrap() 																							// * Destructor
 {
-	std::cout << RED << "ClapTrap 🧨 Destructor called for " << UBR << name << RESET << std::endl;
+	std::cout << RED << "👏 ClapTrap 🧨 Destructor called for " << UBR << name << RESET << std::endl;
 }
 
 //==========================================//
@@ -88,11 +88,11 @@ void ClapTrap::attack(const std::string &target)
 {
 	if ((hitPoints <= 0) || (energyPoints <= 0))
 	{
-		std::cout << "🪤  ClapTrap unable to attack " << target << " due to low energy points or hit points!" << std:: endl;
+		std::cout << "👏 ClapTrap unable to attack " << target << " due to low energy points or hit points!" << std:: endl;
 		return;
 	}
 	energyPoints--;
-	std::cout << YELLOW << "🪤  ClapTrap " << UBR << name << RESET << YELLOW << " attack " << target << " causing " << BOLD << attackDamage << RESET << YELLOW << " points of damage!💥" << RESET << std::endl;
+	std::cout << YELLOW << "👏 ClapTrap " << UBR << name << RESET << YELLOW << " attack " << target << " causing " << BOLD << attackDamage << RESET << YELLOW << " points of damage!💥" << RESET << std::endl;
 	std::cout << "❤️  HP left : " << hitPoints << std::endl;
 	std::cout << "⚡️ EP left : " << energyPoints << std::endl;
 }
@@ -102,7 +102,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 	hitPoints -= amount;
 	if (hitPoints < 0)
 		hitPoints = 0;
-	std::cout << RED << "🪤  ClapTrap " << UBR << name << RESET << RED << " takes " << BOLD << amount << RESET << RED << " points of damage! 💥" << RESET << std::endl;
+	std::cout << RED << "👏 ClapTrap " << UBR << name << RESET << RED << " takes " << BOLD << amount << RESET << RED << " points of damage! 💥" << RESET << std::endl;
 	std::cout << "❤️  HP left : " << hitPoints << std::endl;
 	std::cout << "⚡️ EP left : " << energyPoints << std::endl;
 }
@@ -111,12 +111,12 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if ((hitPoints <= 0) || (energyPoints <= 0))
 	{
-		std::cout << "🪤  ClapTrap unable to 🔧 repair due to low energy points or hit points!" << std:: endl;
+		std::cout << "👏 ClapTrap unable to 🔧 repair due to low energy points or hit points!" << std:: endl;
 		return;
 	}
 	energyPoints--;
 	hitPoints += amount;
-	std::cout << GREEN << "🪤  ClapTrap " << UBR << name << RESET << GREEN << " 🔧 repair itself, getting better -> " << BOLD << amount << RESET << GREEN << " <- ❤️  hit points." << RESET << std::endl;
+	std::cout << GREEN << "👏 ClapTrap " << UBR << name << RESET << GREEN << " 🔧 repair itself, getting better -> " << BOLD << amount << RESET << GREEN << " <- ❤️  hit points." << RESET << std::endl;
 	std::cout << "❤️  HP left : " << hitPoints << std::endl;
 	std::cout << "⚡️ EP left : " << energyPoints << std::endl;
 }

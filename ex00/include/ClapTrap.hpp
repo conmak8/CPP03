@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 09:43:36 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/22 14:20:21 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/24 18:19:10 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ private:
 		int			attackDamage;
 public:
 		//-----------OCF-----------------//
-													// todo constructor without parameter and why?
 		ClapTrap();									// * Constructor (default)
 		ClapTrap(const std::string &name);			// * Constructor
 		ClapTrap(const ClapTrap &copy);				// * Copy constructor
@@ -36,10 +35,6 @@ public:
 		void attack(const std::string &target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
-
-		int getEnergy(){
-			return energyPoints;
-		}
 };
 
 #endif // !CLAPTRAP_HPP
