@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 13:02:48 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/24 10:44:16 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/24 18:43:45 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ DiamondTrap::DiamondTrap(const DiamondTrap &copy) : ClapTrap(copy), ScavTrap(cop
 	std::cout << CYAN << "💎 DiamondTrap 🏗️  Copy Constructor called for " << UBR << name << RESET << std::endl;
 }
 
-//  Todo : not sure how to handle this one
 DiamondTrap &DiamondTrap::operator= (const DiamondTrap &copy)																	// * Copy assignment operator
 {
 	if (this == &copy)
@@ -46,7 +45,7 @@ DiamondTrap &DiamondTrap::operator= (const DiamondTrap &copy)																	//
 		return (*this);
 	}
 	ClapTrap::operator=(copy);
-	name = copy.name;					// ! check again what happens here!
+	name = copy.name;
 	
 	std::cout << CYAN << "💎 DiamondTrap 🏗️  Copy Assignment operator called for " << UBR << name << RESET << std::endl;
 	return (*this);
@@ -64,6 +63,5 @@ void DiamondTrap::attack(const std::string &target)
 
 void DiamondTrap::whoAmI()
 {
-	std::cout << CYAN << "💎 DiamondTrap name is : " << name << " | 🪤  ClapTrap name is : " << ClapTrap::name << RESET << std:: endl;
+	std::cout << CYAN << "💎 DiamondTrap name is : " << name << " | 👏 ClapTrap name is : " << ClapTrap::name << RESET << std:: endl;
 }
-

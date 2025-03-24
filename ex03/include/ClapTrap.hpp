@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 09:43:36 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/23 13:15:29 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/24 18:41:12 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ protected:
 		int			attackDamage;
 public:
 		//-----------OCF-----------------//
-													// todo constructor without parameter and why?
 		ClapTrap();									// * Constructor (default)
 		ClapTrap(const std::string &name);			// * Constructor
 		ClapTrap(const ClapTrap &copy);				// * Copy constructor
@@ -36,12 +35,6 @@ public:
 		void attack(const std::string &target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
-
-		std::string	getName()
-		{
-			return (name);
-		}
-
 };
 
 #endif // !CLAPTRAP_HPP
