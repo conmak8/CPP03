@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 11:22:32 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/24 10:35:28 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/24 10:43:44 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,14 +59,16 @@ int main()
 	// diamond.attack("AAAAAAA");
 	// diamond.whoAmI();
 
-	DiamondTrap diamond1("Sweet");
-	DiamondTrap diamond2("Sparkle");
+	// DiamondTrap diamond1("Sweet");
+	// DiamondTrap diamond2("Sparkle");
 	
-	diamond2 = diamond1;
-	diamond2.whoAmI();
-	diamond2.attack("Enemy");
-	
+	// diamond2 = diamond1;
+	// diamond2.whoAmI();
+	// diamond2.attack("Enemy");
 
+	DiamondTrap diamond1("Sweet");
+	DiamondTrap d2 = diamond1;
+	d2.whoAmI();
 
 	return (0);
 }
